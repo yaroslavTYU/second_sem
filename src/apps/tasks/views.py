@@ -13,7 +13,7 @@ class TaskViewSet(viewsets.ModelViewSet):
 
     filter_backends = [DjangoFilterBackend, filters.OrderingFilter]
     
-    filterset_fileds = ['is_done', 'title', 'description']
-    ordering_fileds  = ['created_at', 'title', 'is_done']
-    ordering = ['-created_at']  
-
+    filterset_fields = ['is_done', 'title', 'description']
+    ordering_fields = ['created_at', 'title', 'is_done']
+    
+    ordering = ['-created_at']
