@@ -48,3 +48,6 @@ class TestTask:
         
         assert response.status_code == 200
         assert len(response.data) == 2
+    
+    def test_check_title(self, api_client,existing_task):
+        assert str(existing_task) == existing_task.title #для 100%  покрытия models
